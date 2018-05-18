@@ -1,0 +1,43 @@
+<p>
+  buttons-component works!
+</p>
+
+<div class="example-wrapper">
+  <div class="example-col">
+    <p>Button</p>
+    <button kendoButton (click)="onButtonClick()">Default</button>
+    <button kendoButton (click)="onButtonClick()" [primary]="true">Primary</button>
+    <button kendoButton (click)="onButtonClick()" [disabled]="true">Disabled</button>
+  </div>
+  <div class="example-col">
+    <p>ButtonGroup</p>
+    <kendo-buttongroup>
+      <button kendoButton [togglable]="true">
+        Option A
+      </button>
+      <button kendoButton [togglable]="true">
+        Option B
+      </button>
+      <button kendoButton [togglable]="true">
+        Option C
+      </button>
+    </kendo-buttongroup>
+  </div>
+  <div class="example-col">
+    <p>DropDownButton</p>
+    <kendo-dropdownbutton [data]="dropDownButtonItems"
+                          [icon]="'cog'"
+                          (itemClick)="onSplitButtonItemClick($event)">
+      User Settings
+    </kendo-dropdownbutton>
+  </div>
+  <div class="example-col">
+    <p>SplitButton</p>
+    <kendo-splitbutton [data]="splitButtonItems"
+                       [icon]="'paste'"
+                       (itemClick)="onSplitButtonItemClick($event)"
+                       (buttonClick)="onSplitButtonClick($event)">
+      Paste
+    </kendo-splitbutton>
+  </div>
+</div>
